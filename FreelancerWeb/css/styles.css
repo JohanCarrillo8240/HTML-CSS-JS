@@ -1,45 +1,138 @@
 :root {
     --primario: #A435F0;
+    --primario-dark: #8d2ecd;
     --secundario: #F0AC35;
+    --blanco: #fff
 }
 
-/* TODO: Investigar la veracidad de que esto es efectivo */
 html{
     font-size: 62.5%;
+    box-sizing: border-box;
 }
 
+/* Setea el box-model para que al incluir padding este no aumente su tamaño global */
+*,*:before,*:after{
+    box-sizing: inherit;
+}
 
 body{
-    font-size: 16px;
+    font-size: 16px; /* 1rem = 10px */
     font-family: "Martian Mono", monospace;
+}
+
+h1{
+    font-size: 4rem;
+}
+
+h2{
+    font-size: 3rem;
+}
+
+h3{
+    font-size: 2rem;
+}
+
+h1, h2, h3 {
+    text-align: center;
 }
 
 .cabecera {
     text-align: center;
+    font-weight: 700;
+    font-size: medium;
+}
+
+.sub-cabecera {
+    font-size: small;
+    font-weight: 400;
 }
 
 .titulo {
-    text-align: center;
-    font-size: 4rem;
-    color: var(--primario);
+    color: var(--blanco);
 }
 
 .contenedor {
-    width: 120rem;
+    max-width: 120rem;
     margin: 0 auto;
+}
+
+.a-boton {
+    background-color: var(--primario);
+    color: var(--blanco);
+    text-decoration: none;
+    border-radius: .5rem;
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: background-color .2s;
+    width: 85%;
+    text-align: center;
+}
+
+.a-boton:hover{
+    background-color: var(--primario-dark)
 }
 
 .nav-principal {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--primario);
+    padding: 1rem;
+}
+
+.bg-nav{
+    background-color: var(--primario);
 }
 
 .nav-principal a{
-    color: var(--secundario);
+    color: var(--blanco);
     text-decoration: none;
+    font-weight: 700;
     transition: font-size 0.5s;
 }
 
+.contenido-hero p {
+    color: var(--secundario);
+    font-weight: 700;
+}
+
+.ubicacion{
+    display: flex;
+}
+
 .nav-principal a:hover{
-    font-size: 1.8rem;
+    font-size: 1.7rem;
+}
+
+.hero {
+    background-image: url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 45rem;
+    position: relative
+}
+
+.contenido-hero{
+    position: absolute;
+    /* background-color: rgba(0, 0, 0, .7); */
+    background-color: rgba(0 0 0 / 70%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 480px) {
+    .nav-principal{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .a-boton{
+        width: auto;
+    }
 }

@@ -12,26 +12,34 @@
 </head>
 <body>
     <header>
-        <h2 class="cabecera">Juan de la Torre | Freelancer</h2>
-        <nav class="nav-principal contenedor">
-            <a href="#Inicio">Inicio</a>
-            <a href="#">Nosotros</a>
-            <a href="#">Clientes</a>
-            <a href="#">Contactos</a>
-        </nav>
+        <p class="cabecera">Juan de la Torre | <span class="sub-cabecera">Freelancer</span></p>
+        <div class="bg-nav">
+            <nav class="nav-principal contenedor">
+                <a href="#Inicio">Inicio</a>
+                <a href="#">Nosotros</a>
+                <a href="#">Clientes</a>
+                <a href="#">Contactos</a>
+            </nav>
+        </div>
     </header>
     
-    <section id="Inicio">
-        <h1 class="titulo">Diseño y Desarrollo Web Freelancer</h1>
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-            <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
-            <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
-        </svg>
-        <p>Guadalajara, Jalisco</p>
+    <section id="Inicio" class="hero">
+        <div class="contenido-hero">
+            <h1 class="titulo">Diseño y Desarrollo Web Freelancer</h1>
+
+            <div class="ubicacion">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#F0AC35" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+                    <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
+                  </svg>
+                <p>Guadalajara, Jalisco</p>
+            </div>
+            <a href="#" class="a-boton">Contáctame</a>
+        </div>
     </section>
 
-    <main>
+    <main class="contenedor">
         <section id="Servicios">
             <h2>Mis servicios</h2>
             <section>
